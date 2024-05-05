@@ -9,7 +9,7 @@ var row = document.createElement("div");
 row.className = "row";
 
 function foo(res1) {
-  //console.log(res1.length);
+  console.log(res1.length);
   for (var i = 0; i < res1.length; i++) {
     var col = document.createElement("div");
     col.className = "col-md-4";
@@ -18,10 +18,11 @@ function foo(res1) {
         <div class="card-body">
             <img src="${res1[i].flags.png}" height=100px width=200px  class="mx-auto d-block"  alt="Responsive image"/>
           
-            <h5 class="card-title" style="margin-top:10px">Capital : ${res1[i].capital[0]}</h5>
-            <p class="card-text">Capital Info : <br/>lat ${res1[i].capitalInfo.latlng[0]} long lat ${res1[i].capitalInfo.latlng[1]}
+            <h5 class="card-title" style="margin-top:10px">Capital : ${res1[i].capital}</h5>
+            <p class="card-text">Capital Info : <br/>lat,lng ${res1[i].latlng} 
             <br/> Region: ${res1[i].region}
-            <br/> Area: ${res1[i].area}</p>
+            <br/> Area: ${res1[i].area}
+            <br/>Country Code : ${res1[i].cioc}</p>
         </div>
       </div>
       `;
